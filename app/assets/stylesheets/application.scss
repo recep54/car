@@ -34,15 +34,15 @@
 
 .cardi
 {
-  max-width: 800px;
-  // margin: 10px;
+  // max-width: 800px;
+  margin: 5px;
   // margin : auto;
   // margin-top: 20px;
 }
 
 .info_car
 {
-  margin: 10px;
+  margin: 5px;
 }
 
 .page_car
@@ -50,6 +50,8 @@
   display: flex;
   flex-wrap: wrap;
   margin: 10px;
+  justify-content: center;
+  background-color: #FAFAFA;
 }
 
 .page
@@ -57,3 +59,20 @@
     display: flex;
     justify-content: center;
 }
+
+.gras
+{
+  font-weight:bold;
+}
+
+.size
+{
+  font-size: 1.6em;
+}
+
+.price
+{
+  color: orange;
+  font-weight:bold;
+}
+
