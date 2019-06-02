@@ -43,6 +43,8 @@
 .info_car
 {
   margin: 5px;
+    display: flex;
+  flex-wrap: wrap;
 }
 
 .page_car
@@ -76,3 +78,16 @@
   font-weight:bold;
 }
 
+.ColorBgInfo
+{
+  background-color: white!important;
+}
+
+.cari
+{
+  min-width: 150px;
+}
+
+.carousel-indicators li {
+  height: 10px!important;
+}

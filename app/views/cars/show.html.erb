@@ -70,8 +70,15 @@
 </div>
 
   <div class="card-body">
-    <p class="card-text size">Prix de départ :
-      <span class="price">15 000€ </span></p>
+    <p class="card-text size">Prix de départ :<br/>
+
+      <% if user_signed_in? %>
+        <span class="price">15 000€ </span></p>
+      <% else %>
+        <%= link_to 'Connectez vous pour voir le prix', user_session_path, class:"btn btn-primary" %>
+      <%end %>
+
+      
   </div>
 </div>
 
@@ -79,19 +86,61 @@
 
 <div class="card info_car col-lg-2" >
   <div class="card-body">
-    <h5 class="card-title">Card title</h5>
+    <!-- <h5 class="card-title ">Card title</h5> -->
     
-    <p class="card-text"><span class="gras">Type:</span><br/> 3B</p>
-    <p class="card-text"><span class="gras">Chasis</span><br/> 3B</p>
-    <p class="card-text"><span class="gras">couleur</span><br/> 3B</p>
-    <p class="card-text"><span class="gras">kilometre</span><br/> 3B</p>
-    <p class="card-text"><span class="gras">score</span><br/> 3B</p>
-    <p class="card-text"><span class="gras">Type:</span><br/> 3B</p>
-    <p class="card-text"><span class="gras">Chasis</span><br/> 3B</p>
-    <p class="card-text"><span class="gras">couleur</span><br/> 3B</p>
-    <p class="card-text"><span class="gras">kilometre</span><br/> 3B</p>
-    <p class="card-text"><span class="gras">score</span><br/> 3B</p>
-    <p class="card-text"><span class="gras">kilometre</span><br/> 3B</p>
+    <div class="card-text cari"><span class="gras">Type:</span><br/> 3B</div>
+    <div class="card-text cari"><span class="gras">Chasis</span><br/> 3B</div>
+    <div class="card-text cari"><span class="gras">couleur</span><br/> 3glfmmmmmmmgmflb flsmlbs sdlfgkdslmB</div>
+    <div class="card-text cari"><span class="gras">kilometre</span><br/> 3B</div>
+    <div class="card-text cari"><span class="gras">score</span><br/> 3B</div>
+    <div class="card-text cari"><span class="gras">Type:</span><br/> 3B</div>
+    <div class="card-text cari"><span class="gras">Chasis</span><br/> 3B</div>
+    <div class="card-text cari"><span class="gras">couleur</span><br/> 3B</div>
+    <div class="card-text cari"><span class="gras">kilometre</span><br/> 3B</div>
+    <div class="card-text cari"><span class="gras">score</span><br/> 3B</div>
+    <div class="card-text cari"><span class="gras">kilometre</span><br/> 3B</div>
+ 
+
+
+    
+
+
+  </div>
+</div>
+
+
+
+</div>
+<!-- </div> -->
+
+<div class="page_car">
+
+<div class="card cardi col-lg-5">
+
+  <h5 class="card-title ">Information supplémentaire</h5>
+
+<p>"<br/>cooling AAC fuel gasoline holding frequency 1685 bidding deadline 2019-06-06 09:51<br/>displacement 4,700cc appraisal point 4 year 26 year shift CAT<br/>mileage 69 thousand km result not yet auction interior B color pearl<br/>start 328.0 ten thousand jpy grade GL550_4 matic AMG exclusive pack 4W<br/>holding hall Kansai Matsubara AA [ Osaka metropolitan area Matsubara city ] opening day 2019-06-06 10:51:<br/>condition [ bidding is possible ]<br/>equipment PS PW AW airbag ABS leather SR navigation TV DT guarantee distance 68,751km<br/>"</p>
+
+</div>
+<div class="card info_car col-lg-2" >
+  <div class="card-body">
+    <!-- <h5 class="card-title">Card title</h5> -->
+    
+    <!-- <button type="button" class="btn btn-primary">Connectez vous pour encherir</button> -->
+    
+    <% if user_signed_in? %>
+      
+      <% if @user.caution %>
+        <p>encherir</p>
+      <% else %>
+        <%= link_to 'Faite le dépot', cars_path, class:"btn btn-primary" %>
+      <%end %>
+
+    <%= @mail %>
+    <%= link_to "Sign out", destroy_user_session_path, method: :delete %>
+    <% else %>
+    <%= link_to 'Connectez vous pour encherir', user_session_path, class:"btn btn-primary" %>
+    <% end %>
  
 
 
@@ -101,7 +150,8 @@
   </div>
 </div>
 </div>
-</div>
+
+
 <%= link_to 'Edit', edit_car_path(@car) %> |
 <%= link_to 'Back', cars_path %>
 
