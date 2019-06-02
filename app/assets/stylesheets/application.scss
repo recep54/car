@@ -24,7 +24,36 @@
   margin-top: 25px;
 }
 
+
+// view of car
 .wi
 {
-  max-width: 500px;
+  max-width: 800px;
+  // padding: 10px;
+}
+
+.cardi
+{
+  max-width: 800px;
+  // margin: 10px;
+  // margin : auto;
+  // margin-top: 20px;
+}
+
+.info_car
+{
+  margin: 10px;
+}
+
+.page_car
+{
+  display: flex;
+  flex-wrap: wrap;
+  margin: 10px;
+}
+
+.page
+{
+    display: flex;
+    justify-content: center;
 }
